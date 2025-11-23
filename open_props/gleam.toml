@@ -1,5 +1,6 @@
 name = "open_props"
 version = "1.0.0"
+target = "javascript"
 
 description = "Gleam bindings to the open-props design system"
 licences = ["MIT"]
