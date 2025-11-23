@@ -1,24 +1,32 @@
 # open_props
 
-[![Package Version](https://img.shields.io/hexpm/v/open_props)](https://hex.pm/packages/open_props)
-[![Hex Docs](https://img.shields.io/badge/hex-docs-ffaff3)](https://hexdocs.pm/open_props/)
+Constant strings to get strong typing for the CSS variables used in the
+[open-props](https://open-props.style/) design system. The strings are
+generated from the raw open_props css files.
 
-```sh
-gleam add open_props@1
-```
+To use them, just import the appropriate module and use them as values. For example
+with the [sketch](https://hexdocs.pm/sketch/) css framework:
+
 ```gleam
-import open_props
+import open_props/colors
+import open_props/sizes
+import sketch/css
+import sketch/lustre as sk_lustre
+import sketch/lustre/element/html as sk_html
 
-pub fn main() -> Nil {
-  // TODO: An example of the project in use
-}
+  sk_html.div(
+    css.class([
+      css.background_color(colors.blue_1),
+      css.color(colors.blue_11),
+      css.margin_(sizes.size_8),
+      css.padding_(sizes.size_9),
+      css.text_align("center"),
+    ]),
+    [],
+    [
+      sk_html.text("hello world"),
+    ],
+  )
 ```
 
-Further documentation can be found at <https://hexdocs.pm/open_props>.
-
-## Development
-
-```sh
-gleam run   # Run the project
-gleam test  # Run the tests
-```
+They can also be used with raw style tags or other CSS systems if you prefer.
