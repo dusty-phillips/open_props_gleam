@@ -19,6 +19,7 @@ lustre = ">= 5.4.0 and < 6.0.0"
 open_props = { path = "../open_props/" }
 sketch = ">= 4.2.0 and < 5.0.0"
 sketch_lustre = ">= 3.1.1 and < 4.0.0"
+monks_of_style = ">= 1.0.0 and < 2.0.0"
 
 [dev-dependencies]
 gleeunit = ">= 1.0.0 and < 2.0.0"

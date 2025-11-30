@@ -8,7 +8,7 @@ import sketch/lustre/element/html as sk_html
 // gleam add lustre sketch sketch_lustre
 // gleam add --dev lustre_dev_tools
 // see CDN stylesheets imported in gleam.toml under tools.lustre.html
-// gleam run _m lustre/dev start basic_lustre_sketch_renderer
+// gleam run -m lustre/dev start basic_lustre_sketch_renderer
 
 pub fn main() {
   let assert Ok(stylesheet) = sk_lustre.setup()
